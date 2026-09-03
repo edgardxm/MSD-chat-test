@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.home {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  background-color: #000;
+  padding: 1.5rem;
+}
+
+.home h1 {
+  color: #fff;
+  font-size: clamp(2rem, 8vw, 5rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+/* --- banner (alerta no topo) --- */
+.banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 0.85rem 1rem;
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.banner--success {
+  background-color: #16a34a;
+}
+
+.banner--error {
+  background-color: #dc2626;
+}
+
+/* --- formulário de autenticação --- */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 360px;
+}
+
+.auth-form label {
+  color: #9ca3af;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.auth-form__row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.auth-form input {
+  flex: 1;
+  padding: 0.65rem 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #374151;
+  border-radius: 8px;
+  background-color: #111827;
+  color: #fff;
+  outline: none;
+}
+
+.auth-form input:focus {
+  border-color: #16a34a;
+}
+
+.auth-form button {
+  padding: 0.65rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  background-color: #16a34a;
+  color: #fff;
+  cursor: pointer;
+}
+
+.auth-form button:hover:not(:disabled) {
+  background-color: #15803d;
+}
+
+.auth-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.auth-form__hint {
+  color: #6b7280;
+  font-size: 0.8rem;
+}
